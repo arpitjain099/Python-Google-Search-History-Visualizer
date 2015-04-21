@@ -1,0 +1,12 @@
+import json
+from pprint import pprint
+import glob
+a= sorted(glob.glob("*.json"))
+for i in a:
+	print 
+with open('2012-04-01 April 2012 to June 2012.json') as data_file:    
+	data = json.load(data_file)
+	print data["event"][0]['query']['id']['timestamp_usec']
+	print str(data["event"][0]['query']['query_text'])
+	
+
