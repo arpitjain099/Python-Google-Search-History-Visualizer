@@ -21,7 +21,7 @@ for i in a:
 				 
 
 			
-				fi.write ("<tr><td width='15%'>"+(datetime.datetime.fromtimestamp(int(data["event"][k]['query']['id'][0]['timestamp_usec'])/1000000).strftime('%Y-%m-%d %H:%M:%S'))+"</td><td>"+"</td><td>"+"<a href='https://www.google.co.in/search?q="+urllib.quote_plus(data["event"][k]['query']['query_text'])+"' target='_blank'>"+data["event"][k]['query']['query_text']+"</a></td></tr>\n")
+				fi.write ("<tr><td width='15%'>"+(datetime.datetime.fromtimestamp(int(data["event"][k]['query']['id'][0]['timestamp_usec'])/1000000).strftime('%Y-%m-%d %H:%M:%S'))+"</td><td>"+"</td><td>"+"<a href='https://www.google.com/search?q="+urllib.quote_plus(data["event"][k]['query']['query_text'])+"' target='_blank'>"+data["event"][k]['query']['query_text']+"</a></td></tr>\n")
 			except:
 				continue
 fi.write("</table>")
